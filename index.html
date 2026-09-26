@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BS Fintech and Entrepreneurship: KFUPM Business School degree plan, April 2026.">
+<meta property="og:title" content="BS Fintech and Entrepreneurship | KFUPM Business School">
+<meta property="og:description" content="Degree plan, April 2026: overview, learning outcomes, careers, four-year plans and new courses.">
+<meta property="og:image" content="fintech.jpg">
+<link rel="icon" href="favicon.png" type="image/png">
+<title>FTE Program Magazine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+@property --t { syntax: '<number>'; inherits: true; initial-value: 0; }
+
+/* ---------- brand (fixed: the paper keeps KFUPM's identity in every theme) ---------- */
+:root{
+  --k-green:#009767; --k-teal:#115F66; --k-sand:#ECE0C7; --k-sky:#70B7D4; --k-taupe:#A98B6D; --k-grey:#ADABAD; --k-gold:#F0B94F;
+  --paper:#FFFDF8; --ink:#16292B; --ink-2:#4A5B5C; --rule:rgba(17,95,102,.18);
+  --c-b:#C6E2EE; --c-u:#C9F2E2; --c-m:#E6E4E6; --c-n:#DDD1C5;
+  --display:"Archivo","Arial Black",Arial,sans-serif;
+  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+
+  /* desk (viewer chrome) */
+  --desk:#D9DDD6; --desk-2:#C9CFC6; --chrome-ink:#16292B; --chrome-muted:#566664; --chrome-accent:#0B7F58;
+  --chip-bg:rgba(255,255,255,.62); --shadow:rgba(16,40,36,.30);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ color-scheme:dark;
+    --desk:#0E1714; --desk-2:#16231F; --chrome-ink:#E3ECE8; --chrome-muted:#8FA39C; --chrome-accent:#39C08E;
+    --chip-bg:rgba(30,46,41,.7); --shadow:rgba(0,0,0,.65); }
+}
+:root[data-theme="dark"]{ color-scheme:dark;
+  --desk:#0E1714; --desk-2:#16231F; --chrome-ink:#E3ECE8; --chrome-muted:#8FA39C; --chrome-accent:#39C08E;
+  --chip-bg:rgba(30,46,41,.7); --shadow:rgba(0,0,0,.65); }
+
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html,body{height:100%}
+body{margin:0; background:radial-gradient(120% 100% at 50% 35%, var(--desk), var(--desk-2)); background-color:var(--desk);
+  color:var(--chrome-ink); font-family:var(--body); display:flex; flex-direction:column; overflow:hidden; padding-inline:16px}
+
+/* ---------- viewer chrome ---------- */
+.bar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding-block:12px 6px; max-width:1300px; width:100%; margin-inline:auto}
+.bar-t{font:800 14px/1.1 var(--display); font-stretch:112%; letter-spacing:.01em; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.bar-t span{color:var(--chrome-accent)}
+.btns{display:flex; gap:8px; flex-shrink:0}
+.cbtn{font:600 12px var(--body); letter-spacing:.05em; text-transform:uppercase; padding:8px 13px; border-radius:999px;
+  border:1px solid color-mix(in srgb, var(--chrome-ink) 22%, transparent); background:var(--chip-bg); color:var(--chrome-ink); cursor:pointer;
+  display:flex; align-items:center; gap:6px}
+.cbtn:hover{border-color:var(--chrome-accent); color:var(--chrome-accent)}
+.cbtn svg{width:14px; height:14px}
+.cbtn:focus-visible,.nav:focus-visible,#scrub:focus-visible{outline:2px solid var(--chrome-accent); outline-offset:3px}
+
+.stage{flex:1; min-height:0; position:relative; display:grid; place-items:center}
+.book{position:relative; perspective:3000px; touch-action:none; user-select:none; -webkit-user-select:none; cursor:grab;
+  transition:transform .7s cubic-bezier(.35,.15,.2,1)}
+.book.dragging{cursor:grabbing}
+.book-shadow{position:absolute; top:2%; bottom:-2%; border-radius:6px; box-shadow:0 26px 50px -18px var(--shadow), 0 6px 14px -6px var(--shadow); pointer-events:none; transition:left .7s cubic-bezier(.35,.15,.2,1), right .7s cubic-bezier(.35,.15,.2,1)}
+.leaf{position:absolute; top:0; transform-origin:left center; transform-style:preserve-3d;
+  transform:rotateY(calc(var(--t) * -180deg)); transition:--t .8s cubic-bezier(.33,.12,.22,1); will-change:transform}
+.leaf.instant{transition:none}
+.leaf.hide{visibility:hidden}
+.face{position:absolute; inset:0; overflow:hidden; backface-visibility:hidden; -webkit-backface-visibility:hidden; background:var(--paper)}
+.face.back{transform:rotateY(180deg)}
+.face .sheet{transform:scale(var(--s)); transform-origin:0 0; position:absolute; left:0; top:0}
+/* paper depth near the spine + light play while turning */
+.face::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:5}
+.face.front::after{background:linear-gradient(90deg, rgba(0,0,0,.16), rgba(0,0,0,.04) 4%, transparent 9%, transparent 78%, rgba(0,0,0,calc(var(--t) * .5)) 100%),
+  linear-gradient(90deg, transparent, rgba(255,255,255,calc(var(--t) * .25)) 60%, transparent)}
+.face.back::after{background:linear-gradient(270deg, rgba(0,0,0,.16), rgba(0,0,0,.04) 4%, transparent 9%, transparent 78%, rgba(0,0,0,calc((1 - var(--t)) * .5)) 100%)}
+.single .face.front::after{background:linear-gradient(90deg, rgba(0,0,0,.10), transparent 5%, transparent 75%, rgba(0,0,0,calc(var(--t) * .55)) 100%)}
+.face.blank{background:repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,.012) 3px 4px), #F3EFE4}
+.edge-stack{position:absolute; top:0; pointer-events:none; border-radius:0 3px 3px 0}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); z-index:50; width:46px; height:46px; border-radius:50%;
+  border:1px solid color-mix(in srgb, var(--chrome-ink) 20%, transparent); background:var(--chip-bg); color:var(--chrome-ink);
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); display:grid; place-items:center; cursor:pointer}
+.nav:hover{color:var(--chrome-accent); border-color:var(--chrome-accent)}
+.nav:disabled{opacity:.25; cursor:default}
+.nav svg{width:18px; height:18px}
+#prev{left:4px} #next{right:4px}
+@media (max-width:700px){ .nav{display:none} }
+
+.foot{max-width:1300px; width:100%; margin-inline:auto; padding-block:8px calc(12px + env(safe-area-inset-bottom,0px)); display:flex; align-items:center; gap:16px}
+.folio{font:500 12.5px var(--mono); color:var(--chrome-accent); white-space:nowrap; font-variant-numeric:tabular-nums}
+.sect{font:700 14px var(--display); font-stretch:95%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; flex:0 1 auto}
+.scrub-w{flex:1; min-width:80px; display:flex; align-items:center}
+#scrub{width:100%; accent-color:var(--chrome-accent)}
+.hint{font:400 11px var(--mono); color:var(--chrome-muted); white-space:nowrap}
+@media (max-width:700px){ .hint{display:none} .foot{flex-wrap:wrap; gap:6px 12px} .scrub-w{flex-basis:100%; order:3} }
+
+/* zoom reader */
+.zl{position:fixed; inset:0; z-index:100; background:color-mix(in srgb, var(--desk) 92%, black); overflow:auto;
+  padding:calc(60px + env(safe-area-inset-top,0px)) 16px calc(30px + env(safe-area-inset-bottom,0px)); display:flex; flex-direction:column; align-items:center; gap:24px}
+.zl .zp{position:relative; width:min(100%, 820px); overflow:hidden; box-shadow:0 12px 40px var(--shadow); flex-shrink:0}
+.zl .zp .sheet{transform-origin:0 0; position:absolute; left:0; top:0}
+.zclose{position:fixed; top:calc(12px + env(safe-area-inset-top,0px)); right:16px; z-index:101}
+
+@media (prefers-reduced-motion: reduce){ .leaf,.book,.book-shadow{transition:none !important} }
+
+/* ================= MAGAZINE PAGES (600 × 850 design px) ================= */
+.sheet{width:600px; height:850px; overflow:hidden; background:var(--paper); color:var(--ink);
+  font:400 11px/1.5 var(--body); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+.sheet *{margin:0}
+.pad{position:absolute; inset:40px 42px 52px}
+.kick{font:600 8.4px/1.3 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--k-green)}
+.k-light{color:#9FE3C6}
+.h1{font:850 34px/.98 var(--display); font-stretch:118%; letter-spacing:-.012em; color:var(--k-teal); text-wrap:balance; margin-top:10px}
+.h-light{color:#fff}
+.h-sm{font-size:21px; line-height:1.08}
+.pf{position:absolute; left:42px; right:42px; bottom:20px; display:flex; justify-content:space-between; align-items:center; gap:10px;
+  font:500 7.4px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:#7C8A87; border-top:1px solid var(--rule); padding-top:9px; z-index:3}
+.pf-n{font-size:9px; color:var(--k-teal); font-weight:600}
+.pf-dark{color:rgba(255,255,255,.7); border-color:rgba(255,255,255,.25)} .pf-dark .pf-n{color:#fff}
+.p-sand{background:var(--k-sand)}
+.mask-ic{display:inline-block; width:18px; height:18px; background:currentColor; -webkit-mask:var(--ic) center/contain no-repeat; mask:var(--ic) center/contain no-repeat; flex-shrink:0}
+.ic-mega{--ic:url(ic-megaphone.png)}
+
+/* cover */
+.p-cover{background:var(--k-sand)}
+.cv-mast{position:absolute; left:40px; top:34px; font:900 44px/.9 var(--display); font-stretch:125%; letter-spacing:-.02em; color:var(--k-teal); text-transform:uppercase}
+.cv-issue{position:absolute; left:40px; right:40px; top:128px; display:flex; justify-content:space-between; border-top:2px solid var(--k-teal); border-bottom:1px solid var(--k-teal);
+  padding:7px 0; font:600 9px var(--mono); letter-spacing:.18em; text-transform:uppercase; color:var(--k-teal)}
+.cv-stripes{position:absolute; right:-120px; top:160px; width:440px; opacity:.95}
+.cv-title{position:absolute; left:40px; top:560px; font:900 60px/.92 var(--display); font-stretch:110%; letter-spacing:-.025em; color:var(--k-green); text-shadow:0 0 0 transparent}
+.cv-bs{display:block; font:700 13px var(--mono); letter-spacing:.3em; color:var(--k-teal); margin-bottom:12px}
+.cv-lines{position:absolute; left:40px; top:190px; display:grid; gap:14px; width:220px}
+.cv-lines div{font:500 11px/1.35 var(--body); color:var(--k-teal); border-left:3px solid var(--k-green); padding-left:10px}
+.cv-lines b{display:block; font:800 9px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--k-green); margin-bottom:2px}
+.cv-logo{position:absolute; left:40px; bottom:36px; width:140px}
+
+/* contents */
+.toc-h{font-size:46px}
+.toc{margin-top:26px; border-top:2px solid var(--k-teal)}
+.toc-i{display:flex; gap:18px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--rule); color:var(--ink); text-decoration:none; cursor:pointer}
+.toc-i:hover .toc-t{color:var(--k-green)}
+.toc-n{font:600 20px var(--mono); color:var(--k-green); width:34px; font-variant-numeric:tabular-nums}
+.toc-t{font:700 14.5px/1.25 var(--display); font-stretch:100%}
+.toc-sub{margin-top:22px}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px}
+.chip{font:600 9.5px var(--mono); padding:5px 9px; border-radius:99px; background:var(--k-sand); color:var(--k-teal); text-decoration:none; cursor:pointer}
+.chip b{color:var(--k-green); margin-left:4px}
+
+/* presenters */
+.pres-band{position:absolute; left:0; top:0; bottom:0; width:14px; background:var(--k-green)}
+.pres-h{font-size:36px; max-width:430px}
+.pr-list{margin-top:34px; display:grid; gap:18px}
+.pr{display:flex; gap:22px; align-items:center; background:rgba(255,255,255,.45); padding:16px 18px; border-radius:4px 60px 60px 4px}
+.pr-ph{width:112px; height:112px; border-radius:50%; position:relative; flex-shrink:0; padding:6px}
+.pr-ph::before{content:""; position:absolute; inset:0; border-radius:50%; border:5px solid var(--k-green); border-right-color:transparent; border-top-color:transparent; transform:rotate(20deg)}
+.pr-ph img{width:100%; height:100%; border-radius:50%; object-fit:cover; background:#fff; border:1px solid rgba(0,151,103,.3)}
+.pr-n{font:800 20px/1.1 var(--display); font-stretch:105%; color:var(--k-green)}
+.pr-r{font:700 12.5px var(--body); margin-top:6px}
+.pr-d{font-size:12px; color:var(--ink-2); margin-top:2px}
+
+/* overview opener */
+.p-photo{background:#0b1a26}
+.ph-img{position:absolute; left:-240px; top:0; height:100%; width:auto; max-width:none}
+.ph-shade{position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,30,34,.1) 20%, rgba(10,40,44,.85) 62%, #0F4F55 100%)}
+.ph-copy{position:absolute; left:42px; right:42px; bottom:74px}
+.ph-copy .h1{font-size:40px}
+.ph-quote{margin-top:22px; font:400 18px/1.35 var(--body); color:#DDEDEA; border-left:4px solid var(--k-green); padding-left:16px}
+.ph-quote b{color:#fff; font-weight:600}
+
+/* overview */
+.ov-top{display:flex; align-items:center; gap:10px; color:var(--k-green)}
+.ov-top .mask-ic{width:40px; height:40px; color:var(--k-teal)}
+.ov-list{list-style:none; padding:0; margin-top:22px; display:grid; gap:18px}
+.ov-list li{font:400 15.5px/1.45 var(--body); color:var(--ink); padding-left:22px; position:relative}
+.ov-list li::before{content:""; position:absolute; left:0; top:.55em; width:9px; height:9px; background:var(--k-green)}
+.ov-list b{color:var(--k-teal); font-weight:650}
+.disc-h{margin-top:30px; padding-top:12px; border-top:2px solid var(--k-teal)}
+.disc-g{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px}
+.disc{background:var(--k-sand); border-radius:3px; padding:14px 12px 12px; display:flex; flex-direction:column; gap:12px; min-height:88px}
+.disc svg{width:26px; height:26px; color:var(--k-teal)}
+.disc span{font:700 12px/1.2 var(--display); color:var(--k-teal)}
+.disc:nth-child(4){background:var(--k-teal)} .disc:nth-child(4) svg,.disc:nth-child(4) span{color:#fff}
+
+/* learning outcomes */
+.lo-key{display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:12px; font:600 8.5px var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2)}
+.lo-key>span{display:flex; align-items:center; gap:6px}
+.lo-key .mask-ic{width:15px; height:15px; color:var(--k-teal)}
+.plo{margin-top:20px; border-top:2px solid var(--k-teal); padding-top:12px}
+.plo-h{display:flex; gap:14px; align-items:flex-start}
+.plo-n{font:900 54px/.8 var(--display); font-stretch:125%; color:transparent; -webkit-text-stroke:1.4px var(--k-green); flex-shrink:0; width:92px}
+.plo-t{font:800 15px/1.2 var(--display); color:var(--k-teal)}
+.plo-d{font-size:11px; color:var(--ink-2); margin-top:4px}
+.lo-row{display:grid; grid-template-columns:120px 1fr; gap:12px; margin-top:9px}
+.lo-dom{display:flex; gap:8px; align-items:flex-start; font:700 9.5px/1.25 var(--body); color:#fff; background:var(--k-teal); padding:8px; border-radius:3px}
+.lo-dom .mask-ic{color:#fff; width:17px; height:17px}
+.lo-S .lo-dom{background:#1B7A6E} .lo-V .lo-dom{background:var(--k-green)}
+.lo-its{display:grid; gap:6px; align-content:start; padding-top:2px}
+.lo-it{display:grid; grid-template-columns:40px 1fr; gap:8px; font-size:11px; line-height:1.45}
+.lo-code{font:600 9.5px var(--mono); color:var(--k-green); padding-top:1px}
+
+/* careers */
+.car-g{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:24px}
+.car{background:var(--k-sand); border-radius:3px; padding:18px 18px 16px; min-height:318px}
+.car-h{font:800 15px/1.15 var(--display); font-stretch:105%; color:var(--k-teal); display:flex; flex-direction:column; gap:10px; padding-bottom:12px; border-bottom:1px solid rgba(17,95,102,.25)}
+.car-i{font:600 10px var(--mono); color:var(--k-green); letter-spacing:.1em}
+.car ul{list-style:none; padding:0; margin-top:12px; display:grid; gap:10px}
+.car li{font-size:12.5px; line-height:1.3; padding-left:14px; position:relative}
+.car li::before{content:""; position:absolute; left:0; top:.45em; width:6px; height:6px; border-radius:50%; border:1.5px solid var(--k-green)}
+.car-1,.car-2{background:#F6F1E6}
+.car-3{background:var(--k-teal)} .car-3 .car-h{color:#fff; border-color:rgba(255,255,255,.3)} .car-3 .car-i{color:#9FE3C6} .car-3 li{color:#E5F1EF} .car-3 li::before{border-color:#9FE3C6}
+
+/* vision 2030 */
+.v30-stripes{position:absolute; right:-40px; bottom:40px; width:560px; opacity:.9}
+.v30-logo{width:170px; display:block; margin-bottom:30px}
+.p-v30 .h1{font-size:38px}
+.stat{margin-top:22px; border-top:2px solid var(--k-teal); padding-top:10px; display:grid; grid-template-columns:1fr; gap:4px; max-width:420px}
+.stat-n{font:900 44px/1 var(--display); font-stretch:115%; letter-spacing:-.02em; color:var(--k-green)}
+.stat p{font:500 13px/1.4 var(--body); color:var(--k-teal)}
+
+/* academic plan */
+.plan-top{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.cr-badge{font:800 13px var(--display); font-stretch:115%; background:var(--k-teal); color:#fff; padding:5px 11px; border-radius:99px; white-space:nowrap}
+.p-plan .h1{font-size:28px; margin-top:6px}
+.legend{display:flex; flex-wrap:wrap; gap:4px 12px; margin-top:10px; font:500 8.5px var(--body); color:var(--ink-2)}
+.legend span{display:flex; align-items:center; gap:5px}
+.sw{width:11px; height:11px; border-radius:2px; display:inline-block}
+.sw.c-b{background:var(--c-b)} .sw.c-u{background:var(--c-u)} .sw.c-m{background:var(--c-m); outline:1px solid #cfcdcf} .sw.c-n{background:var(--c-n)}
+.year{margin-top:18px}
+.yr-h{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.yr-n{font:850 16px var(--display); font-stretch:118%; color:var(--k-green); text-transform:uppercase; letter-spacing:.01em}
+.yr-rule{flex:1; height:2px; background:var(--k-teal)}
+.yr-g{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.sem{font:600 7.8px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); margin-bottom:3px}
+.plan{width:100%; border-collapse:collapse; font-size:9.4px; line-height:1.25; font-variant-numeric:tabular-nums}
+.plan th{font:600 7.2px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--k-teal); text-align:left; padding:3px 3px; border-bottom:1px solid var(--k-teal)}
+.plan td{padding:4.6px 3px; border-bottom:1px solid rgba(17,95,102,.1); vertical-align:middle}
+.plan th:nth-child(n+3),.plan td:nth-child(n+3){text-align:center; width:18px}
+.plan .cc{width:62px}
+.plan .cc span{display:inline-block; font:600 8.3px var(--mono); padding:2px 4px; border-radius:2px; white-space:nowrap}
+.c-b .cc span{background:var(--c-b)} .c-u .cc span{background:var(--c-u)} .c-m .cc span{background:var(--c-m)} .c-n .cc span{background:var(--c-n)}
+.c-x .cc span{background:transparent; outline:1px dashed #b9c3c1}
+.c-n .ct{font-weight:650; color:#5b4630}
+.plan .cr{font-weight:700}
+.plan tfoot td{font-weight:700; color:var(--k-teal); border-bottom:0; border-top:1.5px solid var(--k-teal)}
+.summer{margin-top:10px; background:var(--k-green); color:#fff; font:700 10px var(--mono); letter-spacing:.06em; text-align:center; padding:6px; border-radius:3px}
+
+/* course pages */
+.c-band{position:absolute; left:0; right:0; top:0; height:210px; background:var(--k-sand); overflow:hidden}
+.c-band img{position:absolute; right:-80px; top:-20px; width:520px; opacity:.55}
+.p-two .c-band{height:150px}
+.course{position:relative}
+.c-head{margin-top:26px}
+.c-code{font:900 64px/.9 var(--display); font-stretch:122%; letter-spacing:-.03em; color:var(--k-green); display:flex; align-items:center; gap:14px}
+.tag-el{font:700 9px var(--mono); letter-spacing:.14em; text-transform:uppercase; background:var(--k-gold); color:#3d2c05; padding:5px 9px; border-radius:99px}
+.c-title{font:800 20px/1.15 var(--display); font-stretch:105%; color:var(--k-teal); margin-top:8px; max-width:470px; text-wrap:balance}
+.c-meta{display:flex; gap:8px; margin-top:34px; flex-wrap:wrap}
+.meta{font:600 9.5px var(--mono); background:var(--k-teal); color:#fff; padding:5px 10px 5px 5px; border-radius:99px; display:flex; gap:7px; align-items:center}
+.meta em{font-style:normal; background:rgba(255,255,255,.18); padding:2px 7px; border-radius:99px; font-size:8px; letter-spacing:.12em; text-transform:uppercase}
+.topics{list-style:none; padding:0; margin-top:18px}
+.topics li{position:relative; padding:.55em 0 .55em 18px; border-bottom:1px solid var(--rule); font-size:var(--fs,11.2px); line-height:1.4; break-inside:avoid}
+.topics li::before{content:""; position:absolute; left:0; top:calc(.55em + .45em); width:7px; height:7px; background:var(--k-green); transform:rotate(45deg)}
+.topics.two{columns:2; column-gap:22px}
+.topics i{font-style:normal; color:var(--k-teal); font-weight:550}
+.p-two .c-head{margin-top:14px}
+.course.compact .c-code{font-size:40px}
+.course.compact .c-title{font-size:15px}
+.course.compact .c-meta{margin-top:10px}
+.course.compact .topics{margin-top:8px}
+.course.compact .topics li{font-size:10.2px; padding-block:3.5px}
+.course.compact .topics li::before{top:8px; width:6px; height:6px}
+.course.compact + .course.compact{margin-top:22px; padding-top:4px; border-top:2px solid var(--k-teal)}
+.course.compact .topics.one{columns:1}
+.course.compact .topics.one li{font-size:11px}
+.note{margin-top:16px; background:var(--k-sand); border-left:4px solid var(--k-gold); padding:10px 12px; font-size:11px}
+.note b{color:var(--k-teal)}
+
+/* benchmarks */
+.p-bm .h1{font-size:28px}
+.bm-hd,.bm{display:grid; grid-template-columns:118px 1fr 1fr; gap:14px}
+.bm-hd{margin-top:22px; font:600 7.8px var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--k-teal); padding-bottom:6px; border-bottom:2px solid var(--k-teal)}
+.bm{padding:11px 0; border-bottom:1px solid var(--rule); font-size:11px; line-height:1.4}
+.bm-s{font:800 12.5px/1.2 var(--display); color:var(--k-teal)}
+.bm-l{color:var(--ink-2)}
+.bm-k{background:var(--k-green); color:#fff; border-radius:4px; padding:14px 12px; margin-top:10px; border:0}
+.bm-k .bm-s{color:#fff; font-size:15px} .bm-k .bm-l{color:#E4F6EE; font-weight:600}
+
+/* justification */
+.ju{display:grid; grid-template-columns:112px 1fr; gap:16px; padding:11px 0; border-bottom:1px solid var(--rule)}
+.p-ju .ju:first-of-type{margin-top:16px; border-top:2px solid var(--k-teal)}
+.ju-k{display:flex; flex-direction:column; gap:5px}
+.ju-c{font:700 10px var(--mono); color:#fff; background:var(--k-teal); padding:3px 7px; border-radius:2px; align-self:flex-start}
+.ju-n{font:750 11.5px/1.25 var(--display); color:var(--k-green)}
+.ju p{font-size:10.4px; line-height:1.5}
+
+/* back cover */
+.p-back{background:var(--k-sand)}
+.bk-stripes{position:absolute; left:-100px; top:30px; width:480px; opacity:.9}
+.bk-t{position:absolute; left:40px; top:540px; font:900 80px/.9 var(--display); font-stretch:115%; letter-spacing:-.03em; color:var(--k-teal)}
+.bk-f{position:absolute; left:40px; right:40px; bottom:38px; display:flex; justify-content:space-between; align-items:flex-end; border-top:2px solid var(--k-teal); padding-top:12px;
+  font:600 9px/1.5 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--k-teal); text-align:right}
+.bk-f img{width:130px}
+
+/* ---- FTE-specific pages ---- */
+.cv-fte{font-size:52px}
+.p-fte-open .ph-img{left:0; width:100%; height:100%; object-fit:cover}
+.p-fte-open .ph-quote{font-size:22px}
+.ov-fte li{font-size:14.5px}
+.disc-4{grid-template-columns:repeat(4,1fr)} .disc-4 .disc{min-height:84px}
+.disc-4 .disc:nth-child(4){background:var(--k-sand)} .disc-4 .disc:nth-child(4) svg,.disc-4 .disc:nth-child(4) span{color:var(--k-teal)}
+.disc-4 .disc:nth-child(3){background:var(--k-teal)} .disc-4 .disc:nth-child(3) svg,.disc-4 .disc:nth-child(3) span{color:#fff}
+.p-path .h1{font-size:30px; max-width:470px}
+.path-img{position:absolute; left:0; right:0; bottom:0; width:100%; height:250px; object-fit:cover; object-position:center 60%}
+.p-path .pf{color:rgba(255,255,255,.8); border-color:rgba(255,255,255,.3)} .p-path .pf-n{color:#fff}
+.hl-list{list-style:none; padding:0; margin-top:20px; display:grid; gap:12px}
+.hl-list li{font:400 13.5px/1.45 var(--body); color:var(--ink); background:rgba(255,255,255,.55); border-left:4px solid var(--k-green); padding:10px 14px; border-radius:0 4px 4px 0}
+.hl-list b{color:var(--k-teal); font-weight:650}
+.path-box{margin-top:16px}
+.path-chips{display:flex; flex-wrap:wrap; gap:7px; margin-top:9px}
+.path-chips span{font:700 11.5px var(--display); color:var(--k-teal); background:#fff; border:1.5px solid var(--k-teal); padding:6px 12px; border-radius:99px}
+.path-chips span:last-child{background:var(--k-green); border-color:var(--k-green); color:#fff}
+.c8-g{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:24px}
+.c8{background:var(--k-sand); border-radius:3px; padding:16px 16px 15px; min-height:140px; display:flex; flex-direction:column; gap:10px}
+.c8-h{font:800 14.5px/1.2 var(--display); font-stretch:105%; color:var(--k-teal); display:flex; flex-direction:column; gap:8px; padding-bottom:10px; border-bottom:1px solid rgba(17,95,102,.25)}
+.c8 p{font-size:12px; line-height:1.4; color:var(--ink)}
+.c8-d{background:#F6F1E6}
+.p-two .course.compact .topics li{font-size:var(--fs,10.2px)}
+.p-two .course.compact .topics li::before{top:calc(.55em + .4em)}
+.c8:nth-child(8){background:var(--k-teal)} .c8:nth-child(8) .c8-h{color:#fff; border-color:rgba(255,255,255,.3)} .c8:nth-child(8) .car-i{color:#9FE3C6} .c8:nth-child(8) p{color:#E5F1EF}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="bar-t">KFUPM Business School <span>/</span> BS FTE</div>
+  <div class="btns">
+    <button class="cbtn" id="tocBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Contents</button>
+    <button class="cbtn" id="zoomBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg>Read</button>
+  </div>
+</header>
+
+<main class="stage" id="stage">
+  <div class="book" id="book" aria-roledescription="book" aria-label="BS Fintech and Entrepreneurship magazine"></div>
+  <button class="nav" id="prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="nav" id="next" type="button" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+</main>
+
+<footer class="foot">
+  <span class="folio" id="folio">01 / 28</span>
+  <span class="sect" id="sect">Cover</span>
+  <div class="scrub-w"><input type="range" id="scrub" min="1" max="28" value="1" aria-label="Go to page"></div>
+  <span class="hint">Swipe or ← → to turn pages</span>
+</footer>
+
+<div class="zl" id="zl" hidden><button class="cbtn zclose" id="zclose" type="button">Close</button><div id="zpages" style="display:contents"></div></div>
+
+<div id="src" hidden>
+<section class="sheet p-cover" data-section="Cover">
+  <div class="cv-mast">KFUPM<br>Business School</div>
+  <div class="cv-issue"><span>Positioning Revamp · Degree Plan</span><span>April 2026</span></div>
+  <img class="cv-stripes" src="stripes-teal.png" alt="">
+  <div class="cv-title cv-fte"><span class="cv-bs">BS</span>Fintech and<br>Entrepreneurship</div>
+  <div class="cv-lines">
+    <div><b>Overview</b>Fintech, AI, blockchain and venture-building in one program</div>
+    <div><b>New courses</b>Every new course, topic by topic</div>
+    <div><b>Academic plans</b>Summer training &amp; internship tracks</div>
+  </div>
+  <img class="cv-logo" src="kfupm-logo.png" alt="KFUPM">
+</section>
+<section class="sheet p-paper p-toc" data-section="Contents"><div class="pad">
+  <div class="kick ">KFUPM Business School · April 2026</div>
+  <h1 class="h1 toc-h">In this issue</h1>
+  <nav class="toc"><a class="toc-i" href="#p3" data-go="3"><span class="toc-n">03</span><span class="toc-t">Presenters</span></a><a class="toc-i" href="#p4" data-go="4"><span class="toc-n">04</span><span class="toc-t">Overview</span></a><a class="toc-i" href="#p6" data-go="6"><span class="toc-n">06</span><span class="toc-t">Program Learning Outcomes</span></a><a class="toc-i" href="#p8" data-go="8"><span class="toc-n">08</span><span class="toc-t">Career Pathways</span></a><a class="toc-i" href="#p9" data-go="9"><span class="toc-n">09</span><span class="toc-t">Career Prospects</span></a><a class="toc-i" href="#p10" data-go="10"><span class="toc-n">10</span><span class="toc-t">Four-year Academic Plan · Summer Training</span></a><a class="toc-i" href="#p12" data-go="12"><span class="toc-n">12</span><span class="toc-t">Four-year Academic Plan · Internship</span></a><a class="toc-i" href="#p14" data-go="14"><span class="toc-n">14</span><span class="toc-t">New course descriptions</span></a></nav>
+  <div class="toc-sub"><div class="kick">New courses at a glance</div><div class="chips"><a class="chip" href="#p14" data-go="14">FINT 230 <b>14</b></a><a class="chip" href="#p15" data-go="15">FINT 330 <b>15</b></a><a class="chip" href="#p16" data-go="16">FINT 350 <b>16</b></a><a class="chip" href="#p17" data-go="17">FINT 340 <b>17</b></a><a class="chip" href="#p18" data-go="18">FINT 430 <b>18</b></a><a class="chip" href="#p19" data-go="19">ENTR 250 <b>19</b></a><a class="chip" href="#p20" data-go="20">BAI 404 <b>20</b></a><a class="chip" href="#p21" data-go="21">ENTR 310 <b>21</b></a><a class="chip" href="#p22" data-go="22">ENTR 320 <b>22</b></a><a class="chip" href="#p23" data-go="23">ENTR 410 <b>23</b></a><a class="chip" href="#p24" data-go="24">ENTR 420 <b>24</b></a><a class="chip" href="#p25" data-go="25">ENTR 495 <b>25</b></a><a class="chip" href="#p25" data-go="25">FINT 495 <b>25</b></a></div></div>
+</div><footer class="pf"><span>KFUPM Business School</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">02</span></footer></section>
+<section class="sheet p-sand p-pres" data-section="Presenters">
+  <div class="pres-band"></div>
+  <div class="pad">
+    <div class="kick ">Presenter</div>
+    <h1 class="h1 pres-h">BS Fintech and Entrepreneurship</h1>
+    <div class="pr-list"><div class="pr"><div class="pr-ph"><img src="ukil.jpg" alt="Dr. Minhajul Islam Ukil"></div>
+  <div class="pr-t"><div class="pr-n">Dr. Minhajul Islam Ukil</div><div class="pr-r">Assistant Professor</div><div class="pr-d">Department of Management and Marketing</div></div></div><div class="pr"><div class="pr-ph"><img src="suleman.jpg" alt="Dr. Muhammad Tahir Suleman"></div>
+  <div class="pr-t"><div class="pr-n">Dr. Muhammad Tahir Suleman</div><div class="pr-r">Assistant Professor</div><div class="pr-d">Department of Accounting and Finance</div></div></div></div>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">03</span></footer></section>
+<section class="sheet p-photo p-fte-open" data-section="Overview">
+  <img class="ph-img" src="fintech.jpg" alt="">
+  <div class="ph-shade"></div>
+  <div class="ph-copy">
+    <div class="kick k-light">KFUPM Business School</div>
+    <h1 class="h1 h-light">BS Fintech and Entrepreneurship</h1>
+    <p class="ph-quote">Inspiring the <b>next generation of digital ventures</b></p>
+  </div><footer class="pf pf-dark"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">04</span></footer></section>
+<section class="sheet p-paper p-ov" data-section="Overview">
+  <div class="pad">
+    <div class="kick ">Overview</div>
+    <ul class="ov-list ov-fte"><li>Prepares <b>entrepreneurial, tech-enabled professionals</b> to <b>design and scale innovative ventures</b> at the <b>intersection of finance, technology, and digital platforms</b></li><li>Integrates <b>finance, computing, AI, cybersecurity, and blockchain</b> to build strong capabilities in developing <b>secure, data-driven, and scalable</b> business solutions</li><li>Develops understanding of <b>crowd behavior, digital marketing, and new media</b> to help students grow platforms, engage users, and drive adoption in competitive digital markets</li><li>Equips graduates to <b>launch, manage, and expand fintech and technology ventures</b> by combining <b>analytical thinking, innovation, and venture-building skills</b></li></ul>
+    <div class="disc-h"><span class="kick">Disciplines and competencies covered</span></div>
+    <div class="disc-g disc-4"><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/><path d="M12 3.5V1.5M20.5 12h2"/></svg><span>Strategy</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20v-7M10 20V9M15 20v-5M20 20V5"/><path d="m4 9 5-4 5 3 6-5"/></svg><span>Finance</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9.5 3v4M14.5 3v4M9.5 17v4M14.5 17v4M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4"/></svg><span>Technology</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="2.6"/><circle cx="5.5" cy="10" r="2"/><circle cx="18.5" cy="10" r="2"/><path d="M7 19c0-2.8 2.2-5 5-5s5 2.2 5 5"/><path d="M2 18.5c0-2 1.5-3.6 3.5-3.6M22 18.5c0-2-1.5-3.6-3.5-3.6"/></svg><span>Crowd/consumer behavior</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 4.5 5.5 4 10l-2 3h-4l-2-3c-.5-4.5 1-8 4-10Z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8 13l-3 2.5 1 3.5 3-2.5M16 13l3 2.5-1 3.5-3-2.5M10.5 19.5 12 22l1.5-2.5"/></svg><span>Entrepreneurship</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/><circle cx="19" cy="8" r="1.2"/></svg><span>Quant/analytics/ computing</span></div><div class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 5 2.5-5 2.5z"/><path d="M8 21h8"/></svg><span>New media</span></div></div>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">05</span></footer></section>
+<section class="sheet p-paper p-lo" data-section="Program learning outcomes">
+  <div class="pad">
+    <div class="kick ">Program Learning Outcomes</div>
+    <h1 class="h1">Learning Objectives</h1>
+    <div class="lo-key"><span><span class="mask-ic" style="--ic:url(ic-knowledge.png)"></span>Knowledge and Understanding</span><span><span class="mask-ic" style="--ic:url(ic-skills.png)"></span>Skills</span><span><span class="mask-ic" style="--ic:url(ic-values.png)"></span>Values, Autonomy, and Responsibility</span></div>
+    <article class="plo"><div class="plo-h"><span class="plo-n">01</span><div><h2 class="plo-t">FinTech and Entrepreneurship Knowledge</h2><p class="plo-d">The ability to explain FinTech and entrepreneurship concepts, principles, and theories appropriately</p></div></div><div class="lo-row lo-K"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-knowledge.png)"></span>Knowledge and Understanding</div><div class="lo-its"><div class="lo-it"><span class="lo-code">1/K1</span><span>Discuss core fintech technologies and digital financial systems, including payment systems, digital banking, blockchain, and data-driven financial services.</span></div><div class="lo-it"><span class="lo-code">1/K2</span><span>Explain entrepreneurial concepts, business frameworks, and steps to start fintech and financial ventures using technology.</span></div></div></div></article><article class="plo"><div class="plo-h"><span class="plo-n">02</span><div><h2 class="plo-t">FinTech for Entrepreneurs</h2><p class="plo-d">The ability to explain, analyze, and utilize financial technologies, digital platforms, and AI-enabled tools to support financial innovation and entrepreneurial activities</p></div></div><div class="lo-row lo-K"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-knowledge.png)"></span>Knowledge and Understanding</div><div class="lo-its"><div class="lo-it"><span class="lo-code">2/K1</span><span>Describe the roles, functions, and applications of financial technologies (FinTech), digital financial platforms, and AI-enabled tools used in modern financial systems and entrepreneurial ventures.</span></div></div></div><div class="lo-row lo-S"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-skills.png)"></span>Skills</div><div class="lo-its"><div class="lo-it"><span class="lo-code">2/S1</span><span>Analyze financial data and utilize FinTech platforms, digital financial tools, and AI-enabled systems to support financial analysis, digital financial services, and entrepreneurial decision-making.</span></div></div></div></article>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">06</span></footer></section>
+<section class="sheet p-paper p-lo" data-section="Program learning outcomes">
+  <div class="pad">
+    <div class="kick ">Program Learning Outcomes · BS Fintech and Entrepreneurship</div>
+    <article class="plo"><div class="plo-h"><span class="plo-n">03</span><div><h2 class="plo-t">Entrepreneurial Leadership and Teamwork Abilities</h2><p class="plo-d">The ability to become entrepreneurial leaders who can use FinTech to drive positive change and innovation in teams and communicate effectively</p></div></div><div class="lo-row lo-K"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-knowledge.png)"></span>Knowledge and Understanding</div><div class="lo-its"><div class="lo-it"><span class="lo-code">3/K1</span><span>Explain leadership principles and frameworks for entrepreneurs</span></div></div></div><div class="lo-row lo-S"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-skills.png)"></span>Skills</div><div class="lo-its"><div class="lo-it"><span class="lo-code">3/S1</span><span>Communicate entrepreneurial ideas and opportunities in developing FinTech solutions effectively.</span></div><div class="lo-it"><span class="lo-code">3/S2</span><span>Work effectively in a collaborative and inclusive teams to achieve common entrepreneurial and FinTech goals.</span></div></div></div></article><article class="plo"><div class="plo-h"><span class="plo-n">04</span><div><h2 class="plo-t">Entrepreneurship Decision-Making Abilities in FinTech</h2><p class="plo-d">The ability to make entrepreneurial FinTech decisions in ethical and sustainable manners</p></div></div><div class="lo-row lo-K"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-knowledge.png)"></span>Knowledge and Understanding</div><div class="lo-its"><div class="lo-it"><span class="lo-code">4/K1</span><span>Discuss entrepreneurial decision-making frameworks and analytical approaches used in FinTech contexts.</span></div></div></div><div class="lo-row lo-S"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-skills.png)"></span>Skills</div><div class="lo-its"><div class="lo-it"><span class="lo-code">4/S1</span><span>Apply structured entrepreneurial problem-solving techniques to evaluate FinTech decisions that consider immediate and long-term</span></div></div></div><div class="lo-row lo-V"><div class="lo-dom"><span class="mask-ic" style="--ic:url(ic-values.png)"></span>Values, Autonomy, and Responsibility</div><div class="lo-its"><div class="lo-it"><span class="lo-code">4/V1</span><span>Students will be able to identify ethical, governance, and sustainability issues in FinTech decisions.</span></div></div></div></article>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">07</span></footer></section>
+<section class="sheet p-sand p-path" data-section="Career pathways">
+  <img class="path-img" src="campus.jpg" alt="KFUPM campus">
+  <div class="pad">
+    <div class="kick ">BS Fintech and Entrepreneurship</div>
+    <h1 class="h1">Inspiring the next generation of digital ventures</h1>
+    <ul class="hl-list"><li>Combines <b>fintech, entrepreneurship, AI, blockchain, cybersecurity, and venture-building</b> into a single program designed around creating and leading digital ventures</li><li>Develops understanding of <b>crowd behavior, digital marketing, and new media</b> to help grow platforms, engage users, and drive adoption in competitive digital markets</li><li>Equips graduates for fast-growing sectors such as <b>digital payments, fintech platforms, product growth, and startup innovation</b></li></ul>
+    <div class="path-box"><div class="kick">Career pathways</div><div class="path-chips"><span>Fintech startups</span><span>Fintech products</span><span>Customer success</span><span>Quantitative analysis</span><span>Fintech compliance</span><span>Blockchain</span><span>Entrepreneurship</span></div></div>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">08</span></footer></section>
+<section class="sheet p-paper p-car8" data-section="Career prospects">
+  <div class="pad">
+    <div class="kick ">BS Fintech and Entrepreneurship</div>
+    <h1 class="h1">Career Prospects</h1>
+    <div class="c8-g"><div class="c8"><div class="c8-h"><span class="car-i">01</span>Fintech Startup Founder / Entrepreneur</div><p>Validates problem-solution fit, raises capital, and executes go-to-market</p></div><div class="c8 c8-d"><div class="c8-h"><span class="car-i">02</span>Fintech Product Specialist/ Manager</div><p>Designs and leads development of digital financial products</p></div><div class="c8 c8-d"><div class="c8-h"><span class="car-i">03</span>Fintech Analyst</div><p>Evaluates fintech deals, markets, and business models</p></div><div class="c8"><div class="c8-h"><span class="car-i">04</span>Customer Success Manager (B2B FinTech)</div><p>Drives adoption and retention for fintech platforms</p></div><div class="c8"><div class="c8-h"><span class="car-i">05</span>Quantitative Analyst (Quant)</div><p>Uses statistical models to optimize trading and assess risk</p></div><div class="c8 c8-d"><div class="c8-h"><span class="car-i">06</span>Fintech Compliance Officer</div><p>Ensures adherence to AML/KYC and data security standards</p></div><div class="c8 c8-d"><div class="c8-h"><span class="car-i">07</span>AI/ML Engineer in Finance</div><p>Builds AI models for fraud prevention and customer behavior</p></div><div class="c8"><div class="c8-h"><span class="car-i">08</span>Blockchain Developer/ Architect</div><p>Builds smart contracts and secure transaction platforms</p></div></div>
+  </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">09</span></footer></section>
+<section class="sheet p-paper p-plan" data-section="Academic plan · Summer Training">
+      <div class="pad">
+        <div class="plan-top"><div class="kick ">BS Fintech and Entrepreneurship (Summer Training)</div><span class="cr-badge">128 CR</span></div>
+        <h1 class="h1">Four-year Academic Plan</h1>
+        <div class="legend"><span><i class="sw c-b"></i>Business courses</span><span><i class="sw c-m"></i>Major core courses</span><span><i class="sw c-u"></i>University required courses</span><span><i class="sw c-n"></i>New courses (11 courses)</span></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Freshman</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>BUS 200</span></td><td class="ct">Business &amp; Entrepreneurship</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>ECON 101</span></td><td class="ct">Principles of Microeconomics</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>ENGL 101</span></td><td class="ct">Intro. to Academic Discourse</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 111</span></td><td class="ct">Belief and Consequences</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-u"><td class="cc"><span>ICS 104</span></td><td class="ct">Intro. to Programm. in Python &amp; C</td><td>2</td><td>3</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>MATH 101</span></td><td class="ct">Calculus I</td><td>4</td><td>0</td><td class="cr">4</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>17</td><td>3</td><td class="cr">18</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>ACCT 110</span></td><td class="ct">Intro. to Financial Accounting</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>ECON 102</span></td><td class="ct">Principles of Macroeconomics</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>ENGL 102</span></td><td class="ct">Intro. to Argument Writing</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 121</span></td><td class="ct">Language Foundation</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-b"><td class="cc"><span>MATH 102</span></td><td class="ct">Calculus II</td><td>4</td><td>0</td><td class="cr">4</td></tr><tr class="c-b"><td class="cc"><span>PE 101</span></td><td class="ct">Health and Physical Education</td><td>0</td><td>2</td><td class="cr">1</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>15</td><td>2</td><td class="cr">16</td></tr></tfoot></table></div></div></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Sophomore</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>ENGL 214</span></td><td class="ct">Academic &amp; Professional Comm.</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>FIN 250</span></td><td class="ct">Financial Management</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 212</span></td><td class="ct">Professional Ethics and Governance</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-u"><td class="cc"><span>ISE 291</span></td><td class="ct">Intro. to Data Science</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>OSC 210</span></td><td class="ct">Introduction to Operations and Supply Chain</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>STAT 214</span></td><td class="ct">Actuaries and Business Statistics</td><td>3</td><td>2</td><td class="cr">4</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>17</td><td>2</td><td class="cr">18</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-b"><td class="cc"><span>BAI 221</span></td><td class="ct">Business Analytics Foundations</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>COE 292</span></td><td class="ct">Intro. to Artificial Intelligence</td><td>3</td><td>2</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 250</span></td><td class="ct">Lean Startup: Crowdsourcing &amp; Business Model Design</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 230</span></td><td class="ct">Introduction to FinTech</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>MKT 250</span></td><td class="ct">Principles of Marketing</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>15</td><td>6</td><td class="cr">15</td></tr></tfoot></table></div></div></div>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">10</span></footer></section>
+<section class="sheet p-paper p-plan" data-section="Academic plan · Summer Training">
+      <div class="pad">
+        <div class="plan-top"><div class="kick ">Four-year Academic Plan · Summer Training</div><span class="cr-badge">128 CR</span></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Junior</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-b"><td class="cc"><span>BAI 300</span></td><td class="ct">Applied AI in Business</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 310</span></td><td class="ct">Startup Financing, VC and Exits Strategies</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FIN 320</span></td><td class="ct">Investments Management and Capital Markets</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 330</span></td><td class="ct">FinTech Regulation &amp; Compliance</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>GS xx</span></td><td class="ct">GS Elective</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>15</td><td>0</td><td class="cr">15</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-m"><td class="cc"><span>CGS 392</span></td><td class="ct">Career Essentials</td><td>0</td><td>2</td><td class="cr">1</td></tr><tr class="c-m"><td class="cc"><span>DSMM 302</span></td><td class="ct">Fundamentals of Digital and Social Media Marketing</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 340</span></td><td class="ct">Financial Modeling and Simulation</td><td>1</td><td>2</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 350</span></td><td class="ct">Decentralized Finance, Blockchain &amp; FinTech Platforms</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 3/4xx</span></td><td class="ct">Islamic/Arabic Elective</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-b"><td class="cc"><span>MGT 310</span></td><td class="ct">Organizational Behvaior</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>12</td><td>4</td><td class="cr">15</td></tr></tfoot></table></div></div><div class="summer">FIN 399 - Summer training (1 Cr)</div></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Senior</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-n"><td class="cc"><span>BAI 404</span></td><td class="ct">Cybersecurity in Business</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 320</span></td><td class="ct">Product and Growth Strategy</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 410</span></td><td class="ct">Case Studies in FinTech &amp; Venture Creation</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>ENTR 411</span></td><td class="ct">Senior Project I</td><td>0</td><td>0</td><td class="cr">0</td></tr><tr class="c-m"><td class="cc"><span>XXX 3/4xx</span></td><td class="ct">Business Elective 1</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>XXX xxx</span></td><td class="ct">Free Elective 1</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>15</td><td>0</td><td class="cr">15</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-n"><td class="cc"><span>ENTR 420</span></td><td class="ct">Venture Launch Innovation Lab</td><td>1</td><td>2</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>ENTR 412</span></td><td class="ct">Senior Project II</td><td>0</td><td>6</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>XXX 3/4xx</span></td><td class="ct">Business Elective 2</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 430</span></td><td class="ct">Behavioural Finance</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>XXX xxx</span></td><td class="ct">Free Elective 2</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>10</td><td>8</td><td class="cr">15</td></tr></tfoot></table></div></div></div>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">11</span></footer></section>
+<section class="sheet p-paper p-plan" data-section="Academic plan · Internship">
+      <div class="pad">
+        <div class="plan-top"><div class="kick ">BS Fintech and Entrepreneurship (Internship)</div><span class="cr-badge">127 CR</span></div>
+        <h1 class="h1">Four-year Academic Plan</h1>
+        <div class="legend"><span><i class="sw c-b"></i>Business courses</span><span><i class="sw c-m"></i>Major core courses</span><span><i class="sw c-u"></i>University required courses</span><span><i class="sw c-n"></i>New courses (11 courses)</span></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Freshman</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>BUS 200</span></td><td class="ct">Business &amp; Entrepreneurship</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>ECON 101</span></td><td class="ct">Principles of Microeconomics</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>ENGL 101</span></td><td class="ct">Intro. to Academic Discourse</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 111</span></td><td class="ct">Belief and Consequences</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-u"><td class="cc"><span>ICS 104</span></td><td class="ct">Intro. to Programm. in Python &amp; C</td><td>2</td><td>3</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>MATH 101</span></td><td class="ct">Calculus I</td><td>4</td><td>0</td><td class="cr">4</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>17</td><td>3</td><td class="cr">18</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-b"><td class="cc"><span>ACCT 110</span></td><td class="ct">Intro. to Financial Accounting</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>ECON 102</span></td><td class="ct">Principles of Macroeconomics</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>ENGL 102</span></td><td class="ct">Intro. to Argument Writing</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 121</span></td><td class="ct">Language Foundation</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-b"><td class="cc"><span>MATH 102</span></td><td class="ct">Calculus II</td><td>4</td><td>0</td><td class="cr">4</td></tr><tr class="c-u"><td class="cc"><span>PE 101</span></td><td class="ct">Health and Physical Education</td><td>0</td><td>2</td><td class="cr">1</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>15</td><td>2</td><td class="cr">16</td></tr></tfoot></table></div></div></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Sophomore</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>ENGL 214</span></td><td class="ct">Academic &amp; Professional Comm.</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>FIN 250</span></td><td class="ct">Financial Management</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>IAS 212</span></td><td class="ct">Professional Ethics and Governance</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-b"><td class="cc"><span>ISE 291</span></td><td class="ct">Intro. to Data Science</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>OSC 210</span></td><td class="ct">Introduction to Operations and Supply Chain</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>STAT 214</span></td><td class="ct">Actuaries and Business Statistics</td><td>3</td><td>2</td><td class="cr">4</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>17</td><td>2</td><td class="cr">18</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-b"><td class="cc"><span>BAI 221</span></td><td class="ct">Business Analytics Foundations</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>COE 292</span></td><td class="ct">Intro. to Artificial Intelligence</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 250</span></td><td class="ct">Lean Startup: Crowdsourcing &amp; Business Model Design</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 230</span></td><td class="ct">Introduction to FinTech</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-u"><td class="cc"><span>IAS 3/4xx</span></td><td class="ct">Islamic/Arabic Elective</td><td>2</td><td>0</td><td class="cr">2</td></tr><tr class="c-b"><td class="cc"><span>MKT 250</span></td><td class="ct">Principles of Marketing</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>17</td><td>0</td><td class="cr">17</td></tr></tfoot></table></div></div></div>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">12</span></footer></section>
+<section class="sheet p-paper p-plan" data-section="Academic plan · Internship">
+      <div class="pad">
+        <div class="plan-top"><div class="kick ">Four-year Academic Plan · Internship</div><span class="cr-badge">127 CR</span></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Junior</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-b"><td class="cc"><span>BAI 300</span></td><td class="ct">Applied AI in Business</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>DSMM 302</span></td><td class="ct">Fundamentals of Digital and Social Media Marketing</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 310</span></td><td class="ct">Startup Financing, VC and Exits Strategies</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FIN 320</span></td><td class="ct">Investments Management and Capital Markets</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 330</span></td><td class="ct">FinTech Regulation &amp; Compliance</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>GS xx</span></td><td class="ct">GS Elective</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>18</td><td>0</td><td class="cr">18</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>CGS 392</span></td><td class="ct">Career Essentials</td><td>0</td><td>2</td><td class="cr">1</td></tr><tr class="c-n"><td class="cc"><span>ENTR 320</span></td><td class="ct">Product and Growth Strategy</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>XXX 3/4xx</span></td><td class="ct">Business Elective 1</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 340</span></td><td class="ct">Financial Modeling &amp; Simulation</td><td>1</td><td>2</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 350</span></td><td class="ct">Decentralized Finance, Blockchain &amp; FinTech Platforms</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-b"><td class="cc"><span>MGT 310</span></td><td class="ct">Organizational Behavior</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>13</td><td>4</td><td class="cr">16</td></tr></tfoot></table></div></div></div>
+        <div class="year"><div class="yr-h"><span class="yr-n">Senior</span><span class="yr-rule"></span></div><div class="yr-g"><div><div class="sem">Semester 1</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-u"><td class="cc"><span>ENTR 411</span></td><td class="ct">Senior Project I</td><td>0</td><td>0</td><td class="cr">0</td></tr><tr class="c-u"><td class="cc"><span>FINT 398</span></td><td class="ct">Internship</td><td>0</td><td>0</td><td class="cr">6</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>0</td><td>0</td><td class="cr">6</td></tr></tfoot></table></div><div><div class="sem">Semester 2</div><table class="plan"><thead><tr><th>Course</th><th>Title</th><th>LT</th><th>LB</th><th>Cr</th></tr></thead><tbody><tr class="c-n"><td class="cc"><span>BAI 404</span></td><td class="ct">Cybersecurity in Business</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 410</span></td><td class="ct">Case Studies in FinTech &amp; Venture Creation</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>ENTR 420</span></td><td class="ct">Venture Launch Innovation Lab</td><td>1</td><td>2</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>ENTR 412</span></td><td class="ct">Senior Project II</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-m"><td class="cc"><span>XXX xxx</span></td><td class="ct">Free Elective 1</td><td>3</td><td>0</td><td class="cr">3</td></tr><tr class="c-n"><td class="cc"><span>FINT 430</span></td><td class="ct">Behavioural Finance</td><td>3</td><td>0</td><td class="cr">3</td></tr></tbody><tfoot><tr><td></td><td>Total</td><td>18</td><td>0</td><td class="cr">18</td></tr></tfoot></table></div></div></div>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">13</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · FINT 230">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">FINT 230</div><h2 class="c-title">Introduction to FinTech</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>BUS 200</span><span class="meta"><em>Topics</em>10</span></div><ul class="topics one"><li>Key drivers of digital transformation in financial services</li><li>Speed and settlement delays</li><li>Digital payments and alternative finance</li><li>Platform-based and ecosystem-driven models</li><li>Peer-to-peer lending and crowdfunding</li><li>Embedded finance and platform integration</li><li>BigTech vs. traditional financial institutions</li><li>Open banking and API ecosystems</li><li>User-centric design in financial services</li><li>FinTech Platforms and System Architecture</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">14</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · FINT 330">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">FINT 330</div><h2 class="c-title">FinTech Regulation and Compliance</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>FINT 230</span><span class="meta"><em>Topics</em>10</span></div><ul class="topics one"><li>Consumer protection, market integrity, and fin. stability</li><li>Regulatory institutions and frameworks</li><li>Payment systems regulation</li><li>Electronic money and digital wallets</li><li>Cross-border payment oversight</li><li>Disclosure, credit risk, and consumer protection</li><li>Licensing and prudential requirements</li><li>Legal classification of crypto assets</li><li>Technology-driven systemic vulnerabilities</li><li>Ethical considerations and responsible AI in Finance</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">15</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · FINT 350">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">FINT 350</div><h2 class="c-title">Decentralized Finance, Blockchain &amp; FinTech Platforms</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>FINT 230</span><span class="meta"><em>Topics</em>11</span></div><ul class="topics one"><li>Cryptographic Foundations</li><li>Bitcoin Architecture and Monetary Design</li><li>Ethereum and Smart Contracts</li><li>Scalability and the Blockchain Trilemma</li><li>Crypto-Economic Incentives and Tokenomics</li><li>Decentralized Exchanges and Automated Market Makers</li><li>Decentralized Lending and Borrowing Protocols</li><li>Stablecoins and Asset Tokenization</li><li>AI, blockchain, big data, cloud computing</li><li>Data Structures for Financial Applications</li><li>Database Systems in FinTech</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">16</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · FINT 340">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">FINT 340</div><h2 class="c-title">Financial Modeling &amp; Simulation</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>FIN 320, BAI 221</span><span class="meta"><em>Topics</em>9</span></div><ul class="topics one"><li>Data collection, cleaning, storage, and management of textual and financial data</li><li>Collecting textual data from financial newspapers and social media</li><li>Web scraping and API-based data extraction</li><li>Text pre-processing: stop words, stemming, lemmatisation</li><li>Feature engineering and text representation techniques</li><li>Applications in trading, portfolio management, and risk modelling</li><li>Big data applications in FinTech</li><li>Integrating textual and numerical data for improved decision-making</li><li>Social media analytics for asset management</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">17</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · FINT 430">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">FINT 430</div><h2 class="c-title">Behavioral Finance</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>FIN 320</span><span class="meta"><em>Topics</em>10</span></div><ul class="topics one"><li>Foundations of Behavioural Decision-Making</li><li>Investor Behaviour in Digital Trading Environments</li><li>Herding, Market Sentiment, and Information Diffusion</li><li>Behavioural Aspects of Cryptocurrencies and Digital Assets</li><li>Algorithmic Trading and Automation in Financial Markets</li><li>Behavioural Asset Pricing in Technology-Driven Markets</li><li>AI, Big Data, and Behavioural Insights</li><li>Measuring sentiment in financial news and social media</li><li>Using sentiment indicators for asset pricing and investment decisions</li><li>Forecasting asset prices and returns</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">18</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · ENTR 250">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">ENTR 250</div><h2 class="c-title">Lean Startup: Crowdsourcing &amp; Business Model Design</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>BUS 200</span><span class="meta"><em>Topics</em>11</span></div><ul class="topics one"><li>Ideation &amp; Opportunity Recognition (Brainstorming and AI-assisted)</li><li>Crowdsourcing for ideation and opportunity discovery</li><li>Feasibility &amp; Data-Driven Analysis</li><li>The Assumption Map (Deconstructing a business model into testable hypotheses)</li><li>Customer Discovery &amp; Market Segmentation</li><li>Hypothesis Testing &amp; Validation</li><li>Business Model Canvas</li><li>Entrepreneurial Strategy (Competitive positioning and the “Why Now” logic)</li><li>Minimum Viable Product (MVP) Architecture &amp; Unit Economics</li><li>Product-Market Fit (PMF)</li><li>Metrics &amp; Growth Accounting</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">19</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · BAI 404">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">BAI 404</div><h2 class="c-title">Cybersecurity in Business</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>ICS 104, BUS 200</span><span class="meta"><em>Topics</em>10</span></div><ul class="topics one"><li>Foundational principles of information security and risk management; cybersecurity concepts and terminologies</li><li>Human behavior, organizational processes, and technological factors shaping cyber risk</li><li>Security governance, policy development, and organizational security architecture</li><li>Operational readiness, business continuity planning, incident detection, response, &amp; recovery</li><li>Legal and ethical considerations in privacy, data protection, and intellectual property</li><li>Data governance and breach management; cybersecurity intelligence and risk communication</li><li>Security awareness, training, and cyber culture development</li><li>Financial, legal, and operational implications of cyber threats</li><li>Cybersecurity challenges in fintech ventures and digital platforms</li><li>Impact of emerging technologies including artificial intelligence, IoT, cloud computing, and quantum cryptography on supply chains and markets</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">20</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · ENTR 310">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">ENTR 310</div><h2 class="c-title">Start-up Financing, Venture Capitals and Exits Strategies</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>BUS 200</span><span class="meta"><em>Topics</em>9</span></div><ul class="topics one"><li>Foundational Venture Finance (Financial projections, unit economics, and burn rate modelling)</li><li>The VC Ecosystem &amp; Fund Mechanics</li><li>Startup Valuation</li><li>Equity Engineering (Term sheet negotiations, deal structuring, and Cap Table simulation)</li><li>Alternative Financing (Using SAFEs, venture debt, and crowdfunding)</li><li>Fintech Capital Strategy</li><li>Strategic Exits (Navigating M&amp;A, Private Equity buy-outs, and the IPO journey)</li><li>Governance, Board Management, and “Founder Vesting”</li><li>Due Diligence Readiness &amp; Data Room Management</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">21</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · ENTR 320">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">ENTR 320</div><h2 class="c-title">Product &amp; Growth Strategy</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>BUS 200</span><span class="meta"><em>Topics</em>9</span></div><ul class="topics one"><li>Product Strategy (build a vision, positioning, and strategic narrative)</li><li>Product Roadmap &amp; Prioritization</li><li>Monetization &amp; Pricing Strategy</li><li>Go-To-Market (GTM) Execution</li><li>Growth Engines (Product-Led Growth, growth hacking, &amp; Viral Loops)</li><li>Platform Dynamics &amp; Network Effects</li><li>Innovation strategy (Platform and ecosystem growth)</li><li>Retention &amp; Lifecycle Marketing (Behavioral economics, churn reduction, customer retention, and LTV optimization)</li><li>Defensibility &amp; Moats (Strategic positioning for long-term market dominance)</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">22</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · ENTR 410">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">ENTR 410</div><h2 class="c-title">Case Studies in FinTech &amp; Venture Creation</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>ENTR 250</span><span class="meta"><em>Topics</em>6</span></div><ul class="topics one"><li>Analysing real startup cases to help formulate entrepreneurial strategy.</li><li>Analysing real startup cases to understand how founders: make high-stakes choices under uncertainty; evaluate customer needs, competitive dynamics, pricing and unit economics; make go-to-market strategies, team challenges, financing options, and pivot decisions; identify pain points in finance and validate whether the problem is real, urgent, and worth solving; and Attract customers when trust is fragile</li><li>Analysing cases on venture capital valuation, raising capital with limited traction, narrative building, and establishing credibility in pitching</li><li>Analysing cases involving ethics, risk management, fraud spikes, outages, breaches, and incident response; how leaders balance speed, cost, and resilience.</li><li>Identifying pain points in legacy finance and validating whether a software or technological solution is real, urgent, and worth solving.</li><li>Examining FinTech technologies and applications in payments, lending, banking, insurance, and investment services.</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">23</span></footer></section>
+<section class="sheet p-paper p-course" data-section="New course · ENTR 420">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course"><div class="c-head"><div class="c-code">ENTR 420</div><h2 class="c-title">Venture Launch Innovation Lab</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>ENTR 250, Senior Standing</span><span class="meta"><em>Topics</em>8</span></div><ul class="topics one"><li>Solution-Space Exploration (Converting validated problems into tech/Fintech solutions).</li><li>Product Architecture &amp; Rapid Prototyping (UX/UI design, MVP scoping)</li><li>Hands on analysis of how the product will delight users, be hard to copy, and enhance margins.</li><li>The North Star Roadmap (Setting growth metrics and milestones)</li><li>Growth &amp; Distribution (hands on growth hacking, and customer acquisition strategy)</li><li>Trust Design &amp; Compliance (Building secure, compliant, and transparent user journeys)</li><li>Launch &amp; Investor Readiness (Traction metrics and the final venture pitch)</li><li>Innovation Capstone (Practical application of all phases to a live prototype/MVP)</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">24</span></footer></section>
+<section class="sheet p-paper p-course p-two" data-section="New course · ENTR 495 &amp; FINT 495">
+      <div class="c-band"><img src="stripes-green.png" alt=""></div>
+      <div class="pad">
+        <div class="kick ">BS Fintech and Entrepreneurship new course descriptions</div>
+        <article class="course compact"><div class="c-head"><div class="c-code">ENTR 495</div><h2 class="c-title">Special Topics in Entrepreneurship</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>BUS 200</span><span class="meta"><em>Topics</em>8</span></div><ul class="topics one"><li>entrepreneurial leadership, high-performing company culture, ethical decision-making and social responsibility</li><li>analysis of a rising FinTech venture</li><li>entrepreneurs and community impact</li><li>strategic thinking and entrepreneurial problem-solving</li><li>climate change and sustainability in entrepreneurship</li><li>creativity as a human skill</li><li>emotional intelligence and uncertainty handling in business</li><li>social entrepreneurship</li></ul></article><article class="course compact"><div class="c-head"><div class="c-code">FINT 495</div><h2 class="c-title">Special Topics in FinTech</h2></div><div class="c-meta"><span class="meta"><em>Pre-requisite</em>FINT 330, FINT 350</span><span class="meta"><em>Topics</em>1</span></div><ul class="topics one"><li>digital payments, blockchain, cryptocurrencies, AI in finance, robo-advisory, crowdfunding, open banking, financial data analytics, and cybersecurity risks. The course evaluates FinTech applications, their impact on banks, markets, and financial inclusion, and discusses ethical, legal, and strategic challenges. Through case studies, students learn to analyse trends and assess t</li></ul></article>
+      </div><footer class="pf"><span>Source: KBS</span><span class="pf-mid">BS Fintech &amp; Entrepreneurship</span><span class="pf-n">25</span></footer></section>
+<section class="sheet p-back" data-section="Thank you">
+  <img class="bk-stripes" src="stripes-teal.png" alt="">
+  <div class="bk-t">Thank you</div>
+  <div class="bk-f"><img src="kfupm-logo.png" alt="KFUPM"><div>All rights reserved © 2024<br>kfupm.edu.sa</div></div>
+</section>
+</div>
+
+<script>
+(() => {
+const SECTIONS = ["Cover", "Contents", "Presenters", "Overview", "Overview", "Program learning outcomes", "Program learning outcomes", "Career pathways", "Career prospects", "Academic plan \u00b7 Summer Training", "Academic plan \u00b7 Summer Training", "Academic plan \u00b7 Internship", "Academic plan \u00b7 Internship", "New course \u00b7 FINT 230", "New course \u00b7 FINT 330", "New course \u00b7 FINT 350", "New course \u00b7 FINT 340", "New course \u00b7 FINT 430", "New course \u00b7 ENTR 250", "New course \u00b7 BAI 404", "New course \u00b7 ENTR 310", "New course \u00b7 ENTR 320", "New course \u00b7 ENTR 410", "New course \u00b7 ENTR 420", "New course \u00b7 ENTR 495 & FINT 495", "Thank you"];
+const SRC = [...document.querySelectorAll('#src > .sheet')];
+const N = SRC.length, PW = 600, PH = 850;
+const stage = document.getElementById('stage'), book = document.getElementById('book');
+const $ = id => document.getElementById(id);
+const pad2 = n => String(n).padStart(2, '0');
+
+let spread = true, leaves = [], L = 0, f = 0, busy = false, pw = 0, ph = 0;
+let page = 1; // 1-based page the reader is on (right page in spread mode)
+{ const m = location.hash.match(/^#p(\d+)$/); if (m) page = Math.min(N, Math.max(1, +m[1])); }
+
+function face(cls, idx){
+  const d = document.createElement('div'); d.className = 'face ' + cls;
+  if (idx == null || idx >= N) d.classList.add('blank');
+  else d.appendChild(SRC[idx].cloneNode(true));
+  return d;
+}
+
+function build(){
+  const W = stage.clientWidth, H = stage.clientHeight;
+  spread = W >= 760 && W / H > 1.02;
+  if (spread){ ph = Math.min(H - 8, (W - 110) / 2 * PH / PW); }
+  else { ph = Math.min(H - 8, (W - 4) * PH / PW); }
+  pw = Math.floor(ph * PW / PH); ph = Math.floor(ph);
+  book.style.setProperty('--s', pw / PW);
+  book.style.width = (spread ? pw * 2 : pw) + 'px'; book.style.height = ph + 'px';
+  book.classList.toggle('single', !spread);
+  book.innerHTML = '<div class="book-shadow" id="bshadow"></div><div class="edge-stack" id="edgeR"></div><div class="edge-stack" id="edgeL"></div>';
+  leaves = [];
+  L = spread ? Math.ceil(N / 2) : N;
+  for (let k = 0; k < L; k++){
+    const lf = document.createElement('div'); lf.className = 'leaf instant';
+    lf.style.width = pw + 'px'; lf.style.height = ph + 'px'; lf.style.left = (spread ? pw : 0) + 'px';
+    if (spread){ lf.append(face('front', 2*k), face('back', 2*k + 1)); }
+    else { lf.append(face('front', k), face('back', null)); }
+    book.appendChild(lf); leaves.push(lf);
+  }
+  f = spread ? Math.floor(page / 2) : page - 1;
+  f = Math.max(0, Math.min(maxF(), f));
+  layout(true);
+}
+
+function zFor(k){ return k < f ? k + 1 : 2 * L - k; }
+function layout(instant){
+  leaves.forEach((lf, k) => {
+    if (instant) lf.classList.add('instant');
+    lf.style.setProperty('--t', k < f ? 1 : 0);
+    lf.style.zIndex = zFor(k);
+    // only render what can be seen: two nearest leaves on each side
+    const vis = spread ? (k >= f - 2 && k <= f + 1) : (k >= f && k <= f + 1);
+    lf.classList.toggle('hide', !vis);
+  });
+  if (instant) requestAnimationFrame(() => requestAnimationFrame(() => leaves.forEach(l => l.classList.remove('instant'))));
+  position(); ui();
+}
+
+function position(){
+  // closed book: centre the cover (front) or back cover (back)
+  let x = 0;
+  if (spread){ if (f === 0) x = -pw / 2; else if (f === L) x = pw / 2; }
+  book.style.transform = `translateX(${x}px)`;
+  const sh = $('bshadow');
+  if (sh){
+    const left = spread ? (f === 0 ? pw : 0) : 0, right = spread ? (f === L ? pw : 0) : 0;
+    sh.style.left = left + 'px'; sh.style.right = right + 'px';
+  }
+  // page-edge thickness: pages still to read (right) and already read (left)
+  const er = $('edgeR'), el = $('edgeL');
+  const remain = L - f, done = f;
+  const layers = n => Math.min(5, Math.ceil(n / 3));
+  const mk = (n, dir) => { let s = []; for (let i = 1; i <= layers(n); i++) s.push(`${dir*i*1.3}px ${i*.9}px 0 -.3px #F7F3E8`, `${dir*i*1.3}px ${i*.9}px 0 .2px #C9C3B3`); return s.join(',') || 'none'; };
+  if (er){ er.style.left = (spread ? pw : 0) + 'px'; er.style.width = pw + 'px'; er.style.height = ph + 'px'; er.style.boxShadow = remain > 0 ? mk(remain, 1) : 'none'; er.style.zIndex = 0; }
+  if (el){ el.style.left = '0px'; el.style.width = pw + 'px'; el.style.height = ph + 'px'; el.style.boxShadow = (spread && done > 0) ? mk(done, -1) : 'none'; el.style.zIndex = 0; }
+}
+
+function visiblePages(){
+  if (!spread) return [f + 1];
+  const out = []; if (f > 0) out.push(2 * f); if (f < L) out.push(2 * f + 1); return out;
+}
+function ui(){
+  const vp = visiblePages();
+  page = vp[vp.length - 1];
+  $('folio').textContent = (vp.length === 2 ? `${pad2(vp[0])}–${pad2(vp[1])}` : pad2(vp[0])) + ` / ${N}`;
+  const names = [...new Set(vp.map(p => SECTIONS[p - 1]))];
+  $('sect').textContent = names.join('  ·  ');
+  $('prev').disabled = f === 0; $('next').disabled = f >= maxF();
+  $('scrub').value = vp[0];
+  try { history.replaceState(null, '', '#p' + vp[0]); } catch (e) {}
+}
+
+function done(lf, fn){
+  let ok = false; const g = () => { if (ok) return; ok = true; lf.removeEventListener('transitionend', g); fn(); };
+  lf.addEventListener('transitionend', g); setTimeout(g, 950);
+}
+function maxF(){ return spread ? (N % 2 ? L - 1 : L) : L - 1; }
+function next(){
+  if (busy || f >= maxF()) return;
+  busy = true; const lf = leaves[f];
+  [leaves[f + 1], leaves[f + 2]].forEach(l => l && l.classList.remove('hide'));
+  lf.style.zIndex = 3 * L; lf.classList.remove('instant'); lf.style.setProperty('--t', 1);
+  f++; position();
+  done(lf, () => { busy = false; layout(false); });
+}
+function prev(){
+  if (busy || f <= 0) return;
+  busy = true; const lf = leaves[f - 1];
+  lf.classList.remove('hide'); lf.style.zIndex = 3 * L; lf.classList.remove('instant'); lf.style.setProperty('--t', 0);
+  f--; position();
+  done(lf, () => { busy = false; layout(false); });
+}
+function goPage(p){
+  if (busy) return;
+  p = Math.max(1, Math.min(N, p));
+  const nf = spread ? Math.floor(p / 2) : p - 1;
+  if (nf === f) return;
+  if (nf === f + 1) return next();
+  if (nf === f - 1) return prev();
+  f = nf; layout(true);
+}
+
+$('next').addEventListener('click', next);
+$('prev').addEventListener('click', prev);
+$('tocBtn').addEventListener('click', () => goPage(2));
+$('scrub').addEventListener('input', e => { if (!busy) { const p = +e.target.value; const nf = spread ? Math.floor(p/2) : p-1; if (nf !== f){ f = nf; layout(true); } } });
+document.addEventListener('keydown', e => {
+  if (!$('zl').hidden){ if (e.key === 'Escape') closeZoom(); return; }
+  if (e.target.matches('input')) return;
+  if (['ArrowRight','PageDown',' '].includes(e.key)){ e.preventDefault(); next(); }
+  if (['ArrowLeft','PageUp'].includes(e.key)){ e.preventDefault(); prev(); }
+  if (e.key === 'Home') goPage(1); if (e.key === 'End') goPage(N);
+});
+
+/* drag: the page follows the finger, like lifting a real page */
+let d = null;
+book.addEventListener('pointerdown', e => {
+  if (busy) return;
+  const go = e.target.closest('[data-go]');
+  if (go){ e.preventDefault(); goPage(+go.dataset.go); return; }
+  d = { x: e.clientX, t: performance.now(), dir: 0, lf: null, moved: false };
+  book.setPointerCapture(e.pointerId);
+});
+book.addEventListener('click', e => { if (e.target.closest('a')) e.preventDefault(); });
+book.addEventListener('pointermove', e => {
+  if (!d) return;
+  const dx = e.clientX - d.x;
+  if (!d.dir){
+    if (Math.abs(dx) < 6) return;
+    d.dir = dx < 0 ? 1 : -1; d.moved = true;
+    if (d.dir === 1 && f < maxF()){ d.lf = leaves[f]; [leaves[f+1], leaves[f+2]].forEach(l => l && l.classList.remove('hide')); }
+    else if (d.dir === -1 && f > 0){ d.lf = leaves[f - 1]; d.lf.classList.remove('hide'); }
+    if (d.lf){ d.lf.classList.add('instant'); d.lf.style.zIndex = 3 * L; }
+    book.classList.add('dragging');
+  }
+  if (!d.lf) return;
+  const span = spread ? pw * 1.6 : pw * .95;
+  const r = Math.min(1, Math.max(0, Math.abs(dx) / span));
+  d.lf.style.setProperty('--t', d.dir === 1 ? r : 1 - r);
+});
+function endDrag(e){
+  if (!d) return;
+  const g = d; d = null; book.classList.remove('dragging');
+  if (!g.moved){
+    const r = book.getBoundingClientRect(), x = e.clientX - r.left;
+    if (spread){ if (x > r.width / 2) next(); else prev(); }
+    else { if (x > r.width * .5) next(); else prev(); }
+    return;
+  }
+  if (!g.lf) return;
+  const dx = e.clientX - g.x, v = Math.abs(dx) / Math.max(1, performance.now() - g.t);
+  const commit = Math.abs(dx) > (spread ? pw * .35 : pw * .25) || v > .45;
+  g.lf.classList.remove('instant'); busy = true;
+  if (commit){ f += g.dir; position(); }
+  const target = g.dir === 1 ? (commit ? 1 : 0) : (commit ? 0 : 1);
+  g.lf.style.setProperty('--t', target);
+  done(g.lf, () => { busy = false; layout(false); });
+}
+book.addEventListener('pointerup', endDrag);
+book.addEventListener('pointercancel', endDrag);
+
+/* reader: the visible pages at full, legible size */
+function openZoom(){
+  const box = $('zpages'); box.innerHTML = '';
+  visiblePages().forEach(p => {
+    const w = document.createElement('div'); w.className = 'zp';
+    const s = SRC[p - 1].cloneNode(true); w.appendChild(s); box.appendChild(w);
+  });
+  $('zl').hidden = false; sizeZoom(); $('zl').scrollTo(0, 0); $('zclose').focus();
+}
+function sizeZoom(){
+  document.querySelectorAll('#zpages .zp').forEach(w => {
+    const k = w.clientWidth / PW; w.style.height = PH * k + 'px'; w.firstChild.style.transform = `scale(${k})`;
+  });
+}
+function closeZoom(){ $('zl').hidden = true; $('zoomBtn').focus(); }
+$('zoomBtn').addEventListener('click', openZoom);
+$('zclose').addEventListener('click', closeZoom);
+$('zl').addEventListener('click', e => { const go = e.target.closest('[data-go]'); if (go){ e.preventDefault(); closeZoom(); goPage(+go.dataset.go); } });
+
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (!busy) build(); if (!$('zl').hidden) sizeZoom(); }, 120); });
+$('scrub').max = N;
+/* grow topic lists to fill each single-course page (and shrink if a font runs wide) */
+function fit(){
+  const host = document.createElement('div');
+  host.style.cssText = 'position:absolute;left:-10000px;top:0;visibility:hidden';
+  document.body.appendChild(host);
+  SRC.forEach(s => {
+    const list = s.matches('.p-course') ? s.querySelector('.pad') : null;
+    const pad = s.querySelector('.pad');
+    if (!pad) return;
+    host.appendChild(s);
+    const over = () => pad.scrollHeight > pad.clientHeight + 1;
+    if (list){
+      let lo = 10, hi = 17;
+      for (let i = 0; i < 12; i++){ const m = (lo + hi) / 2; list.style.setProperty('--fs', m + 'px'); if (over()) hi = m; else lo = m; }
+      list.style.setProperty('--fs', lo.toFixed(2) + 'px');
+    } else if (over()){
+      let z = 1; while (over() && z > .8){ z -= .02; pad.style.zoom = z; }
+    }
+    document.getElementById('src').appendChild(s);
+  });
+  host.remove();
+}
+const start = () => { try { fit(); } catch (e) {} build(); };
+(document.fonts && document.fonts.ready) ? Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 2500))]).then(start) : start();
+})();
+</script>
+
+</body>
+</html>
